@@ -1,4 +1,4 @@
-/* ============ VUSION_EXTEND_START ============ */
+/* ============ KUBEVUE_EXTEND_START ============ */
 .root {
     color: blue;
 }
@@ -14,8 +14,8 @@
 .other {
     background: blue;
 }
-/* ============ VUSION_EXTEND_END ============ */
-/* ============ VUSION_IMPORT_START ============ */
+/* ============ KUBEVUE_EXTEND_END ============ */
+/* ============ KUBEVUE_IMPORT_START ============ */
 .root[color="primary"] {
     color: green;
 }
@@ -31,7 +31,7 @@
 .other {
     background: green;
 }
-/* ============ VUSION_IMPORT_END ============ */
+/* ============ KUBEVUE_IMPORT_END ============ */
 .root[color="primary"]:hover {
     color: red;
 }

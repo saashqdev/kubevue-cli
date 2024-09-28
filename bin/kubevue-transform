@@ -70,7 +70,7 @@ if (stats.isDirectory()) { // multi -> single
     const files = fs.readdirSync(vuePath);
     if (files.some((file) => !(['.DS_Store', 'index.html', 'index.js', 'module.css'].includes(file)))
         && !program.force) {
-        console.error('[ERROR] 文件夹中包含除 index.html, index.js, module.css 的其他文件，无法转换。如果要丢弃其他文件强制转换，请使用`-f, --force`');
+        console.error('[ERROR] The folder contains other files except index.html, index.js, module.css and cannot be converted. If you want to discard other file casts, use` -f, --force`');
         process.exit(1);
     }
     shell.cp('-r', vuePath, tmpPath);

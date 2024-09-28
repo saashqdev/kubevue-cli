@@ -31,7 +31,7 @@ if (!semver) {
 }
 
 /**
- * 接收输入
+ * Receive input
  */
 const rl = readline.createInterface({
     input: process.stdin,

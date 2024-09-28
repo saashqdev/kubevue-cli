@@ -2,25 +2,25 @@
 <ul :class="$style.content">
     <li :class="$style.section">
         <div :class="$style.sectionWrap">
-            <h1 :class="$style.heading">base64编码的png图片数据</h1>
+            <h1 :class="$style.heading">base64 encoded png image data</h1>
             <h2 :class="$style.subtitle">data:image/png;base64,</h2>
         </div>
     </li>
     <li :class="$style.section">
         <div :class="$style.sectionWrap">
-            <h1 :class="$style.heading">base64编码的jpeg/jpg图片数据</h1>
+            <h1 :class="$style.heading">base64 encoded jpeg/jpg image data</h1>
             <h2 :class="$style.subtitle">data:image/jpg;base64,</h2>
         </div>
     </li>
     <li :class="$style.section">
         <div :class="$style.sectionWrap">
-            <h1 :class="$style.heading">base64编码的gif图片数据</h1>
+            <h1 :class="$style.heading">base64 encoded gif image data</h1>
             <h2 :class="$style.subtitle">data:image/gif;base64,</h2>
         </div>
     </li>
     <li :class="$style.section">
         <div :class="$style.sectionWrap">
-            <h1 :class="$style.heading">base64编码的icon图片数据</h1>
+            <h1 :class="$style.heading">base64 encoded icon image data</h1>
             <h2 :class="$style.subtitle">data:image/ico;base64,</h2>
         </div>
     </li>

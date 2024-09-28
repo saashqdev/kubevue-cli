@@ -43,12 +43,12 @@ if (config.entry && config.entry.pages) {
 
     if (config.entry.commons) {
         webpackConfig.plugins.push(
-            // 将多个 entry chunk 的公共代码打包成公共 chunk
+            // Pack the common code of multiple entry chunks into a common chunk
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'commons',
                 minChunks: 3,
             }),
-            // 将子 chunk 的公共代码打包进父 chunk 中
+            // Pack the common code of the child chunk into the parent chunk
             new webpack.optimize.CommonsChunkPlugin({
                 children: true,
                 minChunks: 3,

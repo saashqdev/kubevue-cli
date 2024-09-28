@@ -20,10 +20,10 @@ global.extraArgs = program.args;
 const directory = path.resolve(process.cwd(), program.args[0] || '');
 
 /*
-* 统计指标：
-*    模板利用率 = 简单的列表页、详情页、用户信息页 / 总模板数
-*    组件利用率 = 库中被使用的组件数 / (库中被使用的组件数 + 项目级别的通用组件数)
-*    根组件利用率 = 库中被使用的根组件数 / (库中被使用的 根组件数 + 项目级别的通用 根组件数)
+* Statistical indicators:
+* Template utilization = simple list page, detail page, user information page / total number of templates
+* Component utilization = number of components used in the library / (number of components used in the library + number of common components at the project level)
+* Root component utilization = number of root components used in the library / (number of root components used in the library + number of common root components at the project level)
 */
 
 function mkRegExp(tag) {
@@ -66,7 +66,7 @@ function readFile(path) {
     if (rexp.test(content)) {
         const name = rexp.exec(content)[1];
         list[name] = true;
-        // 暂时用名称来区分根组件和子组件
+        // Temporarily use names to distinguish root components from subcomponents
         for (const key in list) {
             const rslt = sort(name, key);
             switch (rslt) {
@@ -175,11 +175,11 @@ function listComponents(rootPath, relativePath) {
 }
 console.info(directory);
 listComponents(directory, '');
-// 组件，页面
-console.info(`组件数：${comps}`, `页面数：${nocomps}`);
-// 使用到的库组件
-console.info(`使用到的库组件：`);
+// Component, page
+console.info(`Number of components: ${comps}`, `Number of pages: ${nocomps}`);
+// Library components used
+console.info(`Library components used:`);
 console.info(Object.keys(AllUIUsed), Object.keys(AllUIUsed).length, AllUI.length);
-// 使用到的根组件
-console.info(`使用到的库根组件：`);
+// The root component used
+console.info(`Library root component used:`);
 console.info(Object.keys(AllRootUIUsed), Object.keys(AllRootUIUsed).length, AllRootUI.length);

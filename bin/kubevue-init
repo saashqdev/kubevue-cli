@@ -16,7 +16,7 @@ program
 const projectType = program.args[0];
 const projectName = program.args[1] || 'my-project';
 
-const URL = `https://github.com/kubevue-templates/${projectType}.git`;
+const URL = `https://github.com/saashqdev/kubevue-templates/${projectType}.git`;
 if (shell.exec(`git clone -b master --depth 1 ${URL} ${projectName}`).code) {
     console.error('[ERROR] Unknown template!');
     process.exit(1);

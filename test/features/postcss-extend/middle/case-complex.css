@@ -1,5 +1,5 @@
-/* ============ VUSION_EXTEND_START ============ */
-/* ============ VUSION_EXTEND_START ============ */
+/* ============ KUBEVUE_EXTEND_START ============ */
+/* ============ KUBEVUE_EXTEND_START ============ */
 .root {
     color: blue;
 }
@@ -15,11 +15,11 @@
 .other {
     background: blue;
 }
-/* ============ VUSION_EXTEND_END ============ */
+/* ============ KUBEVUE_EXTEND_END ============ */
 .root:hover {
     color: purple;
 }
-/* ============ VUSION_EXTEND_END ============ */
+/* ============ KUBEVUE_EXTEND_END ============ */
 .root:hover {
     color: red;
 }

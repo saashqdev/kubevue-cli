@@ -2,20 +2,6 @@
 
 CLI for developing Kubevue Projects.
 
-[![CircleCI][circleci-img]][circleci-url]
-[![NPM Version][npm-img]][npm-url]
-[![Dependencies][david-img]][david-url]
-[![NPM Download][download-img]][download-url]
-
-[circleci-img]: https://img.shields.io/circleci/project/github/kubevue/kubevue-cli.svg?style=flat-square
-[circleci-url]: https://circleci.com/gh/kubevue/kubevue-cli
-[npm-img]: http://img.shields.io/npm/v/kubevue-cli.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/kubevue-cli
-[david-img]: http://img.shields.io/david/kubevue/kubevue-cli.svg?style=flat-square
-[david-url]: https://david-dm.org/kubevue/kubevue-cli
-[download-img]: https://img.shields.io/npm/dm/kubevue-cli.svg?style=flat-square
-[download-url]: https://npmjs.org/package/kubevue-cli
-
 ## Project Types
 
 - `library`
@@ -143,17 +129,3 @@ Default `kubevue.config.js` file:
 - [css-sprite-loader][css-sprite-loader-url] ![css-sprite-loader][css-sprite-loader-img]
 - [svg-classic-sprite-loader][svg-classic-sprite-loader-url] ![svg-classic-sprite-loader][svg-classic-sprite-loader-img]
 
-[vue-multifile-loader-img]: http://img.shields.io/npm/v/vue-multifile-loader.svg?style=flat-square
-[vue-multifile-loader-url]: http://npmjs.org/package/vue-multifile-loader
-[kubevue-vue-loader-img]: http://img.shields.io/npm/v/@kubevue/vue-loader.svg?style=flat-square
-[kubevue-vue-loader-url]: http://npmjs.org/package/@kubevue/vue-loader
-[kubevue-css-loader-img]: http://img.shields.io/npm/v/@kubevue/css-loader.svg?style=flat-square
-[kubevue-css-loader-url]: http://npmjs.org/package/@kubevue/css-loader
-[kubevue-doc-loader-img]: http://img.shields.io/npm/v/@kubevue/doc-loader.svg?style=flat-square
-[kubevue-doc-loader-url]: http://npmjs.org/package/@kubevue/doc-loader
-[icon-font-loader-img]: http://img.shields.io/npm/v/icon-font-loader.svg?style=flat-square
-[icon-font-loader-url]: http://npmjs.org/package/icon-font-loader
-[css-sprite-loader-img]: http://img.shields.io/npm/v/css-sprite-loader.svg?style=flat-square
-[css-sprite-loader-url]: http://npmjs.org/package/css-sprite-loader
-[svg-classic-sprite-loader-img]: http://img.shields.io/npm/v/svg-classic-sprite-loader.svg?style=flat-square
-[svg-classic-sprite-loader-url]: http://npmjs.org/package/svg-classic-sprite-loader

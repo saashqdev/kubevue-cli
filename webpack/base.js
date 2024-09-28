@@ -46,7 +46,7 @@ const postcssPlugins = [
     }),
     require('postcss-url')({
         // Rewrite https://github.com/postcss/postcss-url/blob/master/src/type/rebase.js
-        // 只需将相对路径变基，其它让 Webpack 处理即可
+        // Just rebase the relative path and let Webpack handle the rest.
         url(asset, dir) {
             if (asset.url[0] !== '.')
                 return asset.url;
@@ -98,7 +98,7 @@ const vueOptions = merge({
 // CSS loaders options
 let cssRule = [
     { loader: '@kubevue/css-loader', options: Object.assign({
-        // modules: true, // CSS Modules 是关闭的
+        // modules: true, // CSS Modules is turned off
         minimize: config.uglifyJS || config.minifyJS,
         sourceMap: config.sourceMap,
     }, vueOptions.cssModules) },

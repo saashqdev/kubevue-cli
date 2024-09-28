@@ -2,7 +2,7 @@
   "name": "kubevue-cli",
   "description": "CLI for Kubevue Projects, including Application and UI Library.",
   "version": "0.8.17",
-  "author": "Rainfore <rainforest92@126.com>",
+  "author": "Kubeworkz <kubeworkz@gmail.com>",
   "bin": {
     "kubevue": "bin/kubevue",
     "kubevue-dev": "bin/kubevue-dev",
@@ -22,7 +22,7 @@
   "repository": "kubevue/kubevue-cli",
   "homepage": "http://kubevue.github.io",
   "bugs": {
-    "url": "http://github.com/kubevue/kubevue-cli/issues"
+    "url": "http://github.com/saashqdev/kubevue-cli/issues"
   },
   "keywords": [
     "kubevue",
