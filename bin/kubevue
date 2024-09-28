@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+const checker = require('../lib/checker');
+const pkg = require('../package.json');
+
+if (!checker.checkNode())
+    process.exit(1);
+checker.checkUpgrade();
+
+/**
+ * Parse Commands
+ */
+const program = require('commander');
+program
+    .usage('<task> [options]')
+    .version(pkg.version)
+    // Project commands
+    .command('init <project-type> <project-name>', 'Initialize a project')
+    .command('dev', 'Run webpack develop server')
+    .command('build', 'Build a distribution')
+    .command('ui-build', 'Build a custom ui distribution')
+    .command('serve', 'Run a static server')
+    .command('doc', 'Run a documents server')
+    .command('doc-build', 'Build documents')
+    .command('test', 'test a project')
+    .command('publish <version>', 'Publish a new version')
+    .command('ghpages', 'Push output directory to gh-pages')
+    .command('dep', 'List dependencies of kubevue-cli')
+    .command('list', 'List views or components')
+    .command('stats', 'Stats components')
+    // Component commands
+    .command('transform <vue-path>', 'Transform Vue component between singlefile and multifile pattern')
+    .parse(process.argv);

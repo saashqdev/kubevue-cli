@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+
+const checker = require('../lib/checker');
+/**
+ * Parse Commands
+ */
+const program = require('commander');
+program
+    .option('-c, --config-path <path>', 'Kubevue config path')
+    .option('-e, --entry-path <path>', 'Change default entry path')
+    .option('-t, --theme <theme>', 'Choose theme')
+    .option('-l, --library-path <path>', 'Library entry path. To be `./index.js` by default if project type is `library`')
+    .option('-p, --port <port>', 'Web Server Port', parseInt)
+    .option('-O, --no-open', 'Disable to open browser at the beginning')
+    .option('-H, --no-hot', 'Disable to hot reload')
+    .option('-v, --verbose', 'Show more information')
+    .option('--resolve-priority', 'Priority to resolve modules or loaders, "cwd"(default) or "cli"')
+    .parse(process.argv);
+
+global.extraArgs = program.args;
+
+/**
+ * Execute Task
+ */
+require('../lib/register');
+process.env.NODE_ENV = 'development';
+const config = global.kubevueConfig = require('../config/resolve')(program.configPath, program.theme);
+
+if (!checker.checkNode() || !checker.checkVersion(config.version))
+    process.exit(1);
+checker.checkUpgrade();
+
+if (program.entryPath)
+    config.webpack.entry = { bundle: program.entryPath };
+// if (program.hasOwnProperty('theme'))
+//     config.theme = program.theme;
+if (program.hasOwnProperty('libraryPath'))
+    config.libraryPath = program.libraryPath;
+if (program.port)
+    config.webpackDevServer.port = program.port;
+if (program.hasOwnProperty('open'))
+    config.open = program.open;
+if (program.hasOwnProperty('hot'))
+    config.hot = program.hot;
+if (program.hasOwnProperty('verbose'))
+    config.verbose = program.verbose;
+if (program.hasOwnProperty('resolvePriority'))
+    config.resolvePriority = program.resolvePriority;
+
+const server = require('../lib/dev')(require('../webpack/' + config.type));
+server.start();
